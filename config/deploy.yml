@@ -1,0 +1,33 @@
+# Name of your application. Used to uniquely configure containers.
+service: andy-mcp
+
+# Name of the container image.
+image: andrewsbltech/andy-mcp
+
+# Deploy to these servers.
+servers:
+  web:
+    - 170.64.156.161
+
+# Enable SSL auto certification via Let's Encrypt and allow for multiple apps on a single web server.
+# Remove this section when using multiple web servers and ensure you terminate SSL at your load balancer.
+proxy:
+  ssl: true
+  host: mcp.andrewperkins.com.au
+  app_port: 8222
+
+registry:
+  username: andrewsbltech
+
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64
+
+aliases:
+  shell: app exec --interactive --reuse "bash"
+
+# Use a persistent storage volume.
+volumes:
+  - "/root/andy-mcp-db/:/app/message_board.db"
