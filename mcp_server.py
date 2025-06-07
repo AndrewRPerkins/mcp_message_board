@@ -7,7 +7,7 @@ from sqlite_utils import Database
 from fastapi import FastAPI
 
 mcp = FastMCP("Message Board", stateless_http=True)
-db = Database("message_board.db")
+db = Database("andy-mcp-db/message_board.db")
 messages = db["messages"]
 
 

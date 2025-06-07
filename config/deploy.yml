@@ -30,4 +30,4 @@ aliases:
 
 # Use a persistent storage volume.
 volumes:
-  - "/root/andy-mcp-db/:/app/message_board.db"
+  - "/root/andy-mcp-db/:/app/andy-mcp-db"
