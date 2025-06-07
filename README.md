@@ -1,5 +1,6 @@
 # Example MCP message board
 
+Based on my [MCP article](https://andrewperkins.com.au/what-is-an-mcp-anyway/)
 
 ## Installation
 Uses `uv` for package management
