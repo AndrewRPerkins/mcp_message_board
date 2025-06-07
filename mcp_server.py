@@ -16,7 +16,7 @@ async def leave_message(message: str) -> bool:
     """Leaves a message on the message board.
     """
     messages.insert({
-        "message": message,
+        "message": message[:160],
         "time": datetime.datetime.now().isoformat(),
     }, pk="id")  # This will create an auto-incrementing integer primary key
     return True
