@@ -1,0 +1,13 @@
+[project]
+name = "mcp_message_board"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.52.0",
+    "fastapi>=0.115.12",
+    "mcp[cli]>=1.9.1",
+    "sqlite-utils>=3.38",
+    "uvicorn[standard]>=0.34.2",
+]
